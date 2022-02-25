@@ -1,0 +1,47 @@
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold">Contact Us</h1>
+</div>
+
+<div class="row justify-content-center">
+    <% if(newinfoSubmitObj != '') { %>
+        <div class="col-8 alert alert-success" role="alert">
+            <%= newinfoSubmitObj %>
+        </div>
+    <% } %>
+
+    <% if(newinfoErrorsObj != '') { %>
+        <div class="col-8 alert alert-danger" role="alert">
+            <%= newinfoErrorsObj[0].message %>
+        </div>
+    <% } %>
+    
+    <div class="col-8">
+
+        <form action="/contact" enctype="multipart/form-data" method="post">
+            <div class="row g-3">
+                
+                <div class="col-12">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" name="name" id="name" class="form-control" required>
+                </div>
+
+                <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" required>
+                </div>
+            
+                <div class="col-12">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea name="description" id="description" class="form-control" cols="30" rows="5" required></textarea>
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+</div>
