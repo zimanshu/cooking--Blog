@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "node src/app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "himanshu",
   "license": "ISC",
   "dependencies": {
     "connect-flash": "^0.1.1",
